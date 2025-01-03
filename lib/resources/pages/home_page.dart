@@ -1,5 +1,6 @@
+import 'package:flutter_app/app/networking/api_service.dart';
+
 import '/resources/widgets/theme_toggle_widget.dart';
-import '/app/networking/api_service.dart';
 import '/bootstrap/extensions.dart';
 import '/resources/widgets/logo_widget.dart';
 import '/resources/widgets/safearea_widget.dart';
@@ -20,10 +21,10 @@ class _HomePageState extends NyPage<HomePage> {
   @override
   get init => () async {
     /// Uncomment the code below to fetch the number of stars for the Nylo repository
-    // Map<String, dynamic>? githubResponse = await api<ApiService>(
-    //         (request) => request.githubInfo(),
-    // );
-    // _stars = githubResponse?["stargazers_count"];
+    Map<String, dynamic>? githubResponse = await api<ApiService>(
+            (request) => request.githubInfo(),
+    );
+    _stars = githubResponse?["stargazers_count"];
   };
 
   /// Define the Loading style for the page.
