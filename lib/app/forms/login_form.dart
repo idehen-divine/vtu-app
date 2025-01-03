@@ -13,10 +13,13 @@ class LoginForm extends NyFormData {
   @override
   fields() => [
         Field.email("Email",
-            autofocus: true,
-            validate: FormValidator.rule("email"),
+            validate: FormValidator.rule("email").notEmpty().minLength(6),
             style: "compact"),
         Field.password("Password",
-            validate: FormValidator.password(strength: 1), style: "compact"),
+            validate: FormValidator.password(strength: 1)
+                .notEmpty()
+                .minLength(8),
+            style: "compact",
+            viewable: true),
       ];
 }
