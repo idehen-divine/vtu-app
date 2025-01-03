@@ -55,4 +55,48 @@ class DarkThemeColors implements ColorStyles {
   // toast notification
   @override
   Color get toastNotificationBackground => const Color(0xff3e4447);
+
+  @override
+  Color get blue => const Color(0xFF007BFF);
+  @override
+  Color get indigo => const Color(0xFF6610F2);
+  @override
+  Color get purple => const Color(0xFF696CFF);
+  @override
+  Color get pink => const Color(0xFFE83E8C);
+  @override
+  Color get red => const Color(0xFFFF3E1D);
+  @override
+  Color get orange => const Color(0xFFFD7E14);
+  @override
+  Color get yellow => const Color(0xFFFFAB00);
+  @override
+  Color get green => const Color(0xFF71DD37);
+  @override
+  Color get teal => const Color(0xFF20C997);
+  @override
+  Color get cyan => const Color(0xFF03C3EC);
+  @override
+  Color get black => const Color(0xFF393A5A);
+  @override
+  Color get white => const Color(0xFFFFFFFF);
+  @override
+  Color get primary => const Color(0xFF696CFF);
+  @override
+  Color get secondary => const Color(0xFF8592A3);
+  @override
+  Color get success => const Color(0xFF71DD37);
+  @override
+  Color get info => const Color(0xFF03C3EC);
+  @override
+  Color get warning => const Color(0xFFFFAB00);
+  @override
+  Color get danger => const Color(0xFFFF3E1D);
+  @override
+  Color get light => const Color(0xFF494A5D);
+  @override
+  Color get dark => const Color(0xFF6B6C9D);
+  @override
+  Color get gray =>const Color.fromRGBO(230, 230, 241, 0.5);
+
 }

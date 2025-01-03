@@ -55,11 +55,25 @@ abstract class ColorStyles extends BaseColorStyles {
   // toast notification
   Color get toastNotificationBackground;
 
-  // e.g. add a new style
-  // Uncomment the below:
-  // Color get iconBackground;
-
-  // Then implement in color in:
-  // /resources/themes/styles/light_theme_colors
-  // /resources/themes/styles/dark_theme_colors
+  Color get primary;
+  Color get secondary;
+  Color get danger;
+  Color get success;
+  Color get warning;
+  Color get info;
+  Color get blue;
+  Color get indigo;
+  Color get purple;
+  Color get pink;
+  Color get red;
+  Color get orange;
+  Color get yellow;
+  Color get green;
+  Color get teal;
+  Color get cyan;
+  Color get black;
+  Color get white;
+  Color get light;
+  Color get dark;
+  Color get gray;
 }
