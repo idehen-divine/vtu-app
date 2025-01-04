@@ -12,7 +12,7 @@ class RegisterForm extends NyFormData {
 
   @override
   fields() => [
-        Field.text("Name",
+        Field.text("User Name",
             autofocus: true,
             validate: FormValidator.notEmpty(),
             style: "compact"),

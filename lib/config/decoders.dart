@@ -1,5 +1,6 @@
-import '/app/controllers/register_controller.dart';
-import '/app/controllers/login_controller.dart';
+import '/app/controllers/dashboard_controller.dart';
+import '../app/controllers/auths/register_controller.dart';
+import '../app/controllers/auths/login_controller.dart';
 import '/app/controllers/home_controller.dart';
 import '/app/models/user.dart';
 import '/app/networking/api_service.dart';
@@ -51,4 +52,6 @@ final Map<Type, dynamic> controllers = {
   LoginController: () => LoginController(),
 
   RegisterController: () => RegisterController(),
+
+  DashboardController: () => DashboardController(),
 };

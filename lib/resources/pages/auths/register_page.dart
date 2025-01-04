@@ -1,26 +1,29 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/app/forms/auths/register_form.dart';
 import 'package:flutter_app/bootstrap/helpers.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import '/app/forms/login_form.dart';
-import '/app/controllers/login_controller.dart';
+import '../../../app/controllers/auths/register_controller.dart';
 
-class LoginPage extends NyStatefulWidget<LoginController> {
-  static RouteView path = ("/login", (_) => LoginPage());
+class RegisterPage extends NyStatefulWidget<RegisterController> {
+  static RouteView path = ("/register", (_) => RegisterPage());
 
-  LoginPage({super.key}) : super(child: () => _LoginPageState());
+  RegisterPage({super.key}) : super(child: () => _RegisterPageState());
 }
 
-class _LoginPageState extends NyState<LoginPage> {
-  /// [LoginController] controller
-  LoginController get controller => widget.controller;
-  LoginForm form = LoginForm();
+class _RegisterPageState extends NyState<RegisterPage> {
 
-  @override
-  get init => () {};
+  /// [RegisterController] controller
+  RegisterController get controller => widget.controller;
+ RegisterForm form =RegisterForm();
 
-  @override
-  Widget build(BuildContext context) {
+ @override
+  get init => () {
+
+  };
+  
+ @override
+  Widget view(BuildContext context) {
     return Scaffold(
       backgroundColor: ThemeColor.get(context).background,
       body: SafeArea(
@@ -59,7 +62,7 @@ class _LoginPageState extends NyState<LoginPage> {
                     borderRadius: BorderRadius.circular(12),
                     onTap: () {
                       form.submit(onSuccess: (data) {
-                        controller.signIn(data);
+                        controller.signUp(data);
                       });
                     },
                     child: Padding(
@@ -83,17 +86,17 @@ class _LoginPageState extends NyState<LoginPage> {
               children: [
                 RichText(
                   text: TextSpan(
-                    text: "Don't have an account?",
+                    text: "Have an account?",
                     style: TextStyle(
                       color: ThemeColor.get(context).content,
                       fontWeight: FontWeight.bold,
                     ),
                     children: [
                       TextSpan(
-                          text: " Register Now",
+                          text: " SingIn",
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              controller.onTapRegister();
+                              controller.onTapSignin();
                             },
                           style: TextStyle(
                             color: ThemeColor.get(context).blue,
